@@ -97,10 +97,19 @@ body, h1, h2, h3, h4, h5, h6 {
   border-top: 1px solid #e7e7e7;
 }
 
+.banner-overlay{
+ position: absolute;
+ height: 100%;
+ width: 100%;
+ background-color: rgba(0,0,0, 0.7);
+ top: 0;
+}
+
 .banner {
+  position: relative;
   padding: 100px 0;
   color: #f8f8f8;
-  background: url(../img/banner-bg.jpg) no-repeat center center;
+  background: url(../img/footer-bg.jpg) no-repeat center center;
   background-size: cover;
 }
 
