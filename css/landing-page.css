@@ -280,7 +280,7 @@ p.copyright {
 }
 
 #inverted-logo {
-  width: 10%;
+  width: 120px;
 }
 
 .zeal-text {
@@ -288,9 +288,17 @@ p.copyright {
   font-weight: 300;
 }
 
+.bg-light{
+  background-color: white !important;
+  border-bottom: 1px solid #BFBFBF;
+}
+
 @media screen and (max-width: 767px){
+
   .zeal-paragraph{
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  
 }
