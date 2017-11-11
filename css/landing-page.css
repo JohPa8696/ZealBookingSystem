@@ -278,3 +278,8 @@ p.copyright {
 #inverted-logo {
   width: 10%;
 }
+
+.zeal-text {
+  font-size: 1rem;
+  font-weight: 300;
+}
