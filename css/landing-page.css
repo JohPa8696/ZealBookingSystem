@@ -154,4 +154,20 @@ p.copyright {
 #logo {
   width: 30%;
   margin: 20px;
+
+.zeal-heading {
+  text-align: center;
+}
+
+.zeal-paragraph {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.btn-book {
+  display: block;
+  width: 8em;
+  margin: 0 auto;
 }
