@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  
+	<script>
+	<!-- ALL PRICES CAN BE EASILY CHANGED HERE, INPUT CAN BE STRINGS OR NUMBERS -->
+	
+	<!-- VENUE PRICES BELOW -->
+			var onsiteHourlyRate = 20,
+				AVTechnicianHourlyRate = 20,
+				securityHourlyRate = 20,
+				cleaningHourlyRate = 30;
+				
+			<!-- Community rate Prices: -->
+			var mainroomCommunityHourlyRate = 35,
+				mainroomCommunityFullDayRate =250,
+				cafeStageCommunityHourlyRate = 30,
+				cafeStageCommunityFullDayRate =150,
+				galleryCommunityHourlyRate = 25,
+				galleryCommunityFullDayRate =100,
+				meetingRoomCommunityHourlyRate = "Negotiable"
+				;
+			<!-- Corporate rate Prices: -->
+			var mainroomCorporateHourlyRate = 55,
+				mainroomCorporateFullDayRate =550,
+				cafeStageCorporateHourlyRate = 50,
+				cafeStageCorporateFullDayRate =250,
+				galleryCorporateHourlyRate = 35,
+				galleryCorporateFullDayRate =150,
+				meetingRoomCorporateHourlyRate = 35
+				;
+	
+	<!-- STUDIO PRICES BELOW -->
+		var lordesRoomStudioHourlyRate= 20,
+			lordesRoomStudio3HourRate = 50,
+			lordesRoomStudio8HourRate = 140,
+			crowdedHouseRoomStudioHourlyRate= 20,
+			crowdedHouseRoomStudio3HourRate= 50,
+			crowdedHouseRoomStudio8HourRate= 140,
+			six60RoomStudioHourlyRate= 30,
+			six60RoomStudio3HourRate= 80,
+			six60RoomStudio8HourRate= 210,
+			recordingStudioHourlyRate = 40,
+			recordingStudioFullDayRate = 250,
+			mixingEditingStudioHourlyRate = 25
+			;
+			
+	<!-- GEAR PRICES BELOW -->
+		var microphoneHire = 5,
+			cymbalsHire = 10,
+			drumsticksHire = 4,
+			microphoneStandHire = 2,
+			swapToAnalog = 20;
+		var smallPApackageFullDayRateAndDetail = 150 + "<br>Includes: <br>" +
+												"- Speakers with stands (Studio speakers) <br>- Small Analogue Sound Desk <br>- 1 x mic w Stand + Cables";
+		var mediumPApackageFullDayRateAndDetail = 300 + "<br>Includes: <br>" +
+												"- Speakers with Subs (Café speakers) <br>- Small Digital Desk <br>- 1 x Microphone+ Cables";	
+
+			
+	
+	</script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Price calculator</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+	<style>
+	#venue, #studio, #gear, #priceHolder {display:none;}
+	
+	
+	#venueChecked:checked ~ #venue {display:block;}
+	#studioChecked:checked ~ #studio {display:block;}
+	#gearChecked:checked ~ #gear {display:block;}
+	
+	ul {padding: 0; list-style-type: none;}
+	</style>
+	
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="intro-header" style='height:550px;background-image: url("img/studios-hire.jpg");' >
+      <div class="container">
+        <h1 style="padding-top:280px">Price Finder</h1>
+        <h3>Here you can get a rough price estimate before booking</h3>
+        
+		<div class="intro-message">
+
+		              
+        </div>
+      </div>
+    </header>
+
+	
+	
+    <!-- Page Content -->
+    <section class="content-section-a">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 ml-auto">
+            <br><hr><h2 class="section-heading">What would you like to book?</h2>
+            <form>
+				<input type="radio" name="bookingtype" value="venueChecked" id="venueChecked" class="bookingtype"/>I want to book a Venue or Room
+				<br>
+				<input type="radio" name="bookingtype" value="studioChecked" id="studioChecked" class="bookingtype"/>I want to book a Studio
+				<br>
+				<input type="radio" name="bookingtype" value="gearChecked" id="gearChecked" class="bookingtype"/>I want to hire Gear
+				
+				
+				<!-- START INNER LIST 1  (book venue)-->
+				<ul id='venue'>
+				<br><hr><h2 class="section-heading">Who is this booking for?</h2>
+				<li><input type="radio" name="eventtype" value="Community" id="community"/>Community/Non-profit</li>
+				<li><input type="radio" name="eventtype" value="Corporate" id="corporate"/>Corporate</li>
+				
+				<br><br><h2 class="section-heading">Which Venue or Room do you want to book?</h2>
+				<li><input type="radio" name="room" value="mainroom" id="mainroom" />Mainroom (including foyer area)
+				<li><input type="radio" name="room" value="cafeStage" id="cafeStage"/>Cafe stage/ Lounge (including foyer area)
+				<li><input type="radio" name="room" value="gallery" id="gallery" />Gallery
+				<li><input type="radio" name="room" value="meetingRoom" id="meetingRoom" />Meeting Room
+				
+				</ul>
+				<!-- END INNER LIST 1 -->
+				
+				<!-- START INNER LIST 2  (book studio)-->
+				<ul id='studio'>
+				<br><hr><h2 class="section-heading">Which Studio do you want to book?</h2>
+				<h5>Rehearsal Rooms</h5>
+				<li><input type="radio" name="studio" id="lordesRoom" />Lorde's Room
+				<li><input type="radio" name="studio" id="crowdedHouseRoom" />Crowded House Room
+				<li><input type="radio" name="studio" id="six60Room" />Six60 Room
+				<br><br><h5>Optional Additional Gear (please indicate when booking):</h5> <p>Microphone ($5 each)
+				<br>Cymbals/hihat set ($10/set)<br>Drumsticks ($4 per pair)</p>
+				<h5>Recording Session</h5>
+				<li><input type="radio" name="studio" id="recording" />Recording 
+				</ul>
+				<!-- END INNER LIST 2 -->
+				
+				<!-- START INNER LIST 3  (hire gear)-->
+				<ul id='gear'>
+				<br><hr><h2 class="section-heading">Which Equipment do you want to hire?</h2>
+				<li><input type="radio" name="gear" id="smallPA" />Small PA package (Under 75 people)
+				<li><input type="radio" name="gear" id="mediumPA" />Medium PA package (75 or more)
+				</ul>
+				<!-- END INNER LIST 3 -->
+				
+			</form>
+			<div id="priceHolder"> </div>
+			
+			<script>
+			//Whenever form changes, the price text will be changed
+			document.getElementsByTagName("form")[0].addEventListener("change", function (e) {
+				document.getElementById("priceHolder").style.display = "none";
+				var showPrice= false;
+				var priceText= "";
+				
+				if(document.getElementById("venueChecked").checked) {
+					var isMainroomCafeStageOrGallery = false;
+					if(document.getElementById("community").checked) {
+						priceText += "The Community/ Non-profit rates are as follows (NZD): <br><h5>(All prices exclude GST)</h5><br><h3>";
+						if(document.getElementById("mainroom").checked) {
+							priceText += "Hourly venue rate: $" +mainroomCommunityHourlyRate+ " per hour <br>Full day venue booking: $"+mainroomCommunityFullDayRate 
+							+ "<br>Onsite staff: $"+onsiteHourlyRate+"/hr"; showPrice= true; isMainroomCafeStageOrGallery=true;
+						} else if(document.getElementById("cafeStage").checked) {
+							priceText += "Hourly rate: $"+cafeStageCommunityHourlyRate+" per hour <br>Full day booking: $"+cafeStageCommunityFullDayRate
+							+ "<br>Onsite staff: $"+onsiteHourlyRate+"/hr"; showPrice= true; isMainroomCafeStageOrGallery=true;
+						} else if(document.getElementById("gallery").checked) {
+							priceText += "Hourly rate: $"+galleryCommunityHourlyRate+" per hour <br>Full day booking: $"+galleryCommunityFullDayRate
+							+ "<br>Onsite staff: $"+onsiteHourlyRate+"/hr"; showPrice= true; isMainroomCafeStageOrGallery=true;
+						} else if(document.getElementById("meetingRoom").checked) {
+							priceText += "Hourly rate is "+meetingRoomCommunityHourlyRate; showPrice= true;
+						} 
+					} else if(document.getElementById("corporate").checked) {
+						priceText += "The Corporate rates are as follows (NZD): <br><h5>(All prices exclude GST)</h5><br><h3>";
+						if(document.getElementById("mainroom").checked) {
+							priceText += "Hourly rate: $"+mainroomCorporateHourlyRate+" per hour <br>Full day booking: $"+mainroomCorporateFullDayRate
+										+ "<br>Onsite staff: $"+onsiteHourlyRate+"/hr"; showPrice= true; isMainroomCafeStageOrGallery=true;
+						} else if(document.getElementById("cafeStage").checked) {
+							priceText += "Hourly rate: $"+cafeStageCorporateHourlyRate+" per hour <br>Full day booking: $"+cafeStageCorporateFullDayRate
+										+ "<br>Onsite staff: $"+onsiteHourlyRate+"/hr"; showPrice= true; isMainroomCafeStageOrGallery=true;
+						} else if(document.getElementById("gallery").checked) {
+							priceText += "Hourly rate: $"+galleryCorporateHourlyRate+" per hour <br>Full day booking: $"+galleryCorporateFullDayRate
+							+ "<br>Onsite staff: $"+onsiteHourlyRate+"/hr"; showPrice= true; isMainroomCafeStageOrGallery=true;
+						} else if(document.getElementById("meetingRoom").checked) {
+							priceText += "Hourly rate: $"+meetingRoomCorporateHourlyRate+" per hour"; showPrice= true;
+						}
+					}
+					if (isMainroomCafeStageOrGallery) {
+						priceText += "<br><br><h5>Additional services if required:</h5> <p>AV Technician: $"+AVTechnicianHourlyRate+"/hr"
+									+"<br>Security Services: $"+securityHourlyRate+"/hr<br>Cleaning Service: $"+cleaningHourlyRate+"/hr</p>";
+					}
+				}
+				
+				if(document.getElementById("studioChecked").checked) {
+					if(document.getElementById("lordesRoom").checked) {
+						priceText += "Hourly rate: $"+lordesRoomStudioHourlyRate+" per hour <br>3 Hour booking: $"+lordesRoomStudio3HourRate
+									+ "<br>8 hour booking: $"+lordesRoomStudio8HourRate; showPrice= true;
+					} else if(document.getElementById("crowdedHouseRoom").checked) {
+						priceText += "Hourly rate: $"+crowdedHouseRoomStudioHourlyRate+" per hour <br>3 Hour booking: $"+crowdedHouseRoomStudio3HourRate
+									+ "<br>8 hour booking: $"+crowdedHouseRoomStudio8HourRate; showPrice= true;
+					} else if(document.getElementById("six60Room").checked) {
+						priceText += "Hourly rate: $"+six60RoomStudioHourlyRate+" per hour <br>3 Hour booking: $"+six60RoomStudio3HourRate
+									+ "<br>8 hour booking: $"+six60RoomStudio8HourRate; showPrice= true;
+					} else if(document.getElementById("recording").checked) {
+						priceText += "Hourly rate: $"+recordingStudioHourlyRate+" per hour <br>Full day booking: $"+recordingStudioFullDayRate
+									+"<br>If mixing/editing is required: $"+mixingEditingStudioHourlyRate+" per hour"; showPrice= true;
+					}
+				}
+				
+				if(document.getElementById("gearChecked").checked) {
+					if(document.getElementById("smallPA").checked) {
+						priceText = "Full day booking: $"+smallPApackageFullDayRateAndDetail +"<br><br>If delivery required: $50 (within Auckland)"
+									+"<br><br><h5>Additional Options:</h5> <p>Microphone ($"+microphoneHire+" each)"
+								 +"<br>Microphone Stands ($"+microphoneStandHire+" each)<br>Swap analog desk to digital: $"+swapToAnalog+"</p>"; showPrice= true;
+					} else if(document.getElementById("mediumPA").checked) {
+						priceText = "Full day booking: $"+mediumPApackageFullDayRateAndDetail+"<br><br>If delivery required: $50 (within Auckland)"
+									+"<br><br><h5>Additional Options:</h5> <p>Microphone ($"+microphoneHire+" each)"
+								 +"<br>Microphone Stands ($"+microphoneStandHire+" each)"; showPrice= true;
+					}
+				}
+				
+				document.getElementById("priceHolder").innerHTML =
+				'<br><hr><h1 class="section-heading">Prices for your booking:</h1>' +
+				'<h3 >' + priceText + '</h3>';
+				
+				if(showPrice) {document.getElementById("priceHolder").style.display = "block"};
+			});
+			</script>
+			
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+    </section>
+	
+	
+    <aside class="banner" style='background-image: url("img/studios-hire.jpg");'>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-6 my-auto">
+            <h2>Book Now: Click Here</h2>
+          </div>
+          <div class="col-lg-6 my-auto">
+      
+          </div>
+        </div>
+
+      </div>
+      <!-- /.container -->
+
+    </aside>
+    <!-- /.banner -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#about">About</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#services">Services</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <p class="copyright text-muted small">Copyright &copy; Zeal 2017. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
