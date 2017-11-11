@@ -1,0 +1,7 @@
+.intro-header {
+	background: url(../img/Question-Page-Banner.jpg) no-repeat center center;
+}
+#question-form {
+	width: 80%;
+	height: 1000px;
+}
