@@ -1,17 +1,20 @@
-var slideIndex = 1;
-showDivs(slideIndex);
+//Array of images which you want to show: Use path you want.
+var imageNames=new Array('img/venue-banner.jpg','img/studios.jpg','img/Gear.jpg','img/hero.jpg');
+var images = new Array();
+var nextImage=0;
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
+preloadImages(imageNames);
+function preloadImages() {
+    i=1
+    for (var i=0; i <imageNames.length ; i++){
+        images[i] = new Image();
+        images[i].src = imageNames[i];
+    };
+	setInterval(function(){ doSlideshow(); }, 5000);
 }
 
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
-    }
-    x[slideIndex-1].style.display = "block"; 
+function doSlideshow(){
+    if(nextImage>=images.length){nextImage=0;}
+    var header =  document.getElementById("intro-header");
+   	header.style.backgroundImage="url("+images[nextImage++].src+")";
 }
