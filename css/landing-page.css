@@ -174,3 +174,8 @@ p.copyright {
 .btn-book:hover {
   color: white;
 }
+
+#logo {
+  width: 25%;
+  margin: 20px;
+}
