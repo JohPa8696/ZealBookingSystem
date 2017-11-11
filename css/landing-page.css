@@ -77,12 +77,12 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 .content-section-a {
-  padding: 50px 0;
+  padding: 25px 0;
   /* background-color: #f8f8f8; */
 }
 
 .content-section-b {
-  padding: 50px 0;
+  padding: 15px 0;
   /* border-top: 1px solid #e7e7e7;
   border-bottom: 1px solid #e7e7e7; */
 }
@@ -153,6 +153,7 @@ p.copyright {
 
 .zeal-heading {
   text-align: center;
+  padding-top: 20px;
 }
 
 .zeal-paragraph {
@@ -163,7 +164,16 @@ p.copyright {
   padding-bottom: 20px;
 }
 
+.zeal-mini-paragraph {
+  font-size: 1rem;
+  font-weight: 300;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
 .btn-book {
+  border:  2px solid #ee1d23;
   display: block;
   width: 8em;
   margin: 0 auto;
@@ -172,10 +182,36 @@ p.copyright {
 }
 
 .btn-book:hover {
-  color: white;
+  border:  2px solid #ee1d23;
+  display: block;
+  width: 8em;
+  margin: 0 auto;
+  color: #ee1d23;
+  background-color: white;
 }
+
 
 #logo {
   width: 25%;
   margin: 20px;
+}
+
+.zeal-button-secondary {
+  border:  2px solid #ee1d23;
+  display: block;
+  width: 8em;
+  margin: 0 auto;
+  color: #ee1d23;
+}
+
+.zeal-button-secondary:hover {
+  display: block;
+  width: 8em;
+  margin: 0 auto;
+  background: #ee1d23;
+  color: white;
+}
+
+.zeal-col {
+  padding-bottom: 50px;
 }
