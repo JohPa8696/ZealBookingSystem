@@ -166,4 +166,10 @@ p.copyright {
   display: block;
   width: 8em;
   margin: 0 auto;
+  background: #ee1d23;
+  color: white;
+}
+
+.btn-book:hover {
+  color: white;
 }
