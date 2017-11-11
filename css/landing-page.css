@@ -176,6 +176,11 @@ p.copyright {
   padding-bottom: 10px;
 }
 
+.zeal-heading-left-alt {
+  text-align: left;
+  font-weight: 350;
+  padding: 20px 100px 10px 100px; 
+}
 .zeal-paragraph {
   font-size: 1rem;
   font-weight: 300;
@@ -239,10 +244,6 @@ p.copyright {
   margin: 0 auto;
   background: #ee1d23;
   color: white;
-}
-
-.zeal-col {
-  padding-bottom: 25px;
 }
 
 .zeal-icon {
