@@ -154,7 +154,7 @@ p.copyright {
 .zeal-heading {
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .zeal-heading-left{
@@ -177,6 +177,14 @@ p.copyright {
   /* padding-left: 10px;
   padding-right: 10px; */
   padding-bottom: 20px;
+}
+.zeal-mini-paragraph-center {
+  font-size: 1rem;
+  font-weight: 300;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .btn-book {
@@ -219,5 +227,39 @@ p.copyright {
 }
 
 .zeal-col {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
+}
+
+.zeal-icon {
+  display: block;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.zeal-icon-border {
+  border: 2px solid #ee1d23;
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 160px;
+}
+
+.zeal-calc-icon {
+  width: 71px;
+  height: 95px;
+  margin: auto;
+  margin-top: 30px;
+  display:block;
+ 
+}
+
+.zeal-booking-icon {
+  width: 92px; 
+  height: 76px;
+}
+
+.zeal-msg-icon {
+  width: 95px;
+  height: 75px;
 }
