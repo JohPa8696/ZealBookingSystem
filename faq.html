@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Zeal FAQ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- HEADERS -->
+    <header class="intro-header">
+      <div class="container">
+        <div class="intro-message">
+          <img id="logo" src="img/zeal-official-logo_vector.jpg"></img>
+          <h3 id="">Zeal FAQ</h3>
+        </div>
+      </div>
+    </header>
+    
+<!-- -------------------------------------------------------------------------------- START -->
+<!--
+-->
+    <br><br>
+    
+    <center>
+    <div id="QA" align="left">
+      <ul>
+        <!--
+          1. For this FAQ to work properly, all question statement must be followed by an answer statement.
+          2. All questions and answers must be enclosed with a pair of "<li>" and "</li>" tags.
+          Example, <li>Question?</li>
+                   <li>Answer .....</li>
+        -->
+        <font color="#333333">
+        <li style="margin-bottom:12px;font-size:22px;color:black;">1. Can alcohol be consumed at the venue?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">We have a no alcohol and drugs policy at Zeal. Therefore, no alcohol can be sold or consumed within and outside the premises.</li>
+        <li style="margin-bottom:12px;font-size:22px;">2. Can food be consumed at the venue?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">Yes, you can bring your own kai. We also have a cafe onsite where you can purchase hot food and drinks. Let us know if you would like us to keep the cafe open during your event. (All of the profits from the cafe go to supporting our youth programmes)</li>
+        <li style="margin-bottom:12px;font-size:22px;">3. Are there any venue noise restrictions?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">No, make as much noise as you want! We are in a commercial area so there is no residencial sound restriction.</li>
+        <li style="margin-bottom:12px;font-size:22px;">4. Is there sound and lighting equipment available?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">Yes, we have onsite sound and lighting equipment that can be utilise for your event. Have a look at our equipment list ---<br>
+            Let us know If you require a lighting or sound tech by filling out the booking form.</li>
+        <li style="margin-bottom:12px;font-size:22px;">5. Do you have an outdoor space?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">Yes, we have an outdoor courtyard at the front of the building that can be used for concerts, performances and markets. Let us know when you are filling out the booking form if you would like to use this space.</li>
+        <li style="margin-bottom:12px;font-size:22px;">6. Is there parking available at the venue?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">Yes, the carpark directly in front of Zeal have a 120 minutes limit. There is paid parking available at the Falls carpark or there is free parking at the Tui Glen Reserve, 5 minutes walk from the venue.</li>
+        <li style="margin-bottom:12px;font-size:22px;">7. Do you have security at the venue?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">Yes, we provide security services. If your event has 101 or more people, it is required to have an onsite security guard. Security guards will be charged at a rate of $25.00 per guard per hour (Includes GST). </li>
+        <li style="margin-bottom:12px;font-size:22px;">8. Do you have provide a cleaning service?</li>
+        <li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">Yes. We can clean the venue after your event (at an additional cost) or you can do it yourself. As long as you do it well! :) A cleaning charge of $30 plus GST per hour will be added to your final invoice if the venue is not left as it is found.</li>
+        </font>
+      </ul>
+    </div>
+    </center>
+    
+    <script type="text/javascript">
+      function toggle(tag) {
+        var element = document.getElementsByName(tag)[0];
+        var parent = element.parentNode
+        if (parent.style.display == "block") {
+          parent.style.display = "none"
+        } else {
+          parent.style.display = "block"   
+        }
+      }
+    
+      function init() {
+        var obj = document.getElementById('QA');
+        var element = "";
+        var elements = obj.getElementsByTagName('li');
+        var index = 1;
+        
+        for (var i=0; i<elements.length; i+=2) {
+          element = elements[i]; 
+          element.innerHTML = "<a href='javascript:toggle(" + index + ")'>" + element.innerHTML + "</a>";
+          index += 1;
+        } 
+  
+        var index = 1;
+        for (var i=1; i < elements.length; i+=2) {
+          var element = elements[i]; 
+          element.innerHTML = "<a name='" + index + "' id='" + index + "'></a>" + element.innerHTML 
+          index += 1;
+          element.style.padding = '0px 0px 10px 20px'; // Answer indent.
+          element.style.listStyleType = 'none';        // Remove bullet point.
+          element.style.display = 'none';
+        }       
+      }
+      
+      window.onload = init; 
+    </script>
+
+<!--
+-->
+<!-- -------------------------------------------------------------------------------- END -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
+
+
+
+
