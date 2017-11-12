@@ -70,6 +70,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet"> 
+    <link href="css/priceFinder.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -96,7 +98,9 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a href="index.html">
+          <img id="inverted-logo" src = "img/zeal-logo.jpg">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -122,7 +126,7 @@
 			  Book with us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#venue-booking">FAQ</a>
+              <a class="nav-link" href="faq.html">FAQ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Contact us</a>
@@ -132,28 +136,18 @@
       </div>
     </nav>
 
-    <!-- Header -->
-    <header class="intro-header" style='height:550px;background-image: url("img/studios-hire.jpg");' >
-      <div class="container">
-        <h1 style="padding-top:280px">Price Finder</h1>
-        <h3>Here you can get a rough price estimate before booking</h3>
-        
-		<div class="intro-message">
-
-		              
-        </div>
-      </div>
-    </header>
-
-	
 	
     <!-- Page Content -->
     <section class="content-section-a">
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 ml-auto">
-            <br><hr><h2 class="section-heading">What would you like to book?</h2>
+
+          <div class="col-lg-10">
+
+          	<h1 class="price-finder-heading">Price Finder</h1>
+       		<p class="price-finder-intro">Here you can get a rough price estimate before booking</p>
+            <hr><h2 class="section-heading">What would you like to book?</h2>
             <form>
 				<label><input type="radio" name="bookingtype" value="venueChecked" id="venueChecked" /><label for="venueChecked">I want to book a Venue or Room</label>
 				<br>
@@ -289,49 +283,35 @@
       <!-- /.container -->
     </section>
 	
-	
-    <aside class="banner" style='background-image: url("img/studios-hire.jpg");'>
-
+    <!-- Footer -->
+    <aside class="banner">
+      <div class="banner-overlay"></div>
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6 my-auto">
-            <h2>Book Now: Click Here</h2>
-          </div>
-          <div class="col-lg-6 my-auto">
-      
-          </div>
+        <div class ="row zeal-text">
+        <div class="col-md-3">
+          Copyright Zeal West. <br> All rights reserved unless otherwise noted.
         </div>
-
+        <div class="col-md-3">
+          <b>Find us online:</b> <br><br>
+          Facebook <br>
+          Instagram
+        </div>
+        <div class="col-md-3">
+          <b>Come say hi:</b> <br><br>
+          20 Alderman Drive, <br>
+          Henderson, <br>
+          Auckland 0612
+        </div>
+        <div class="col-md-3">
+          <b>Drop us a line:</b> <br><br>
+          0800 FIND ZEAL <br>
+          <a class="link-white" href="mailto:hi@zeal.nz">hi@zeal.nz</a>
+        </div>
       </div>
-      <!-- /.container -->
+      </div>
 
     </aside>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Home</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#about">About</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#services">Services</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <p class="copyright text-muted small">Copyright &copy; Zeal 2017. All Rights Reserved</p>
-      </div>
-    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
