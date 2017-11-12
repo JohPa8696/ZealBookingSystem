@@ -28,56 +28,21 @@
   </head>
 
   <body>
-    
 
-  <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <!-- HEADERS -->
+    <header class="intro-header">
       <div class="container">
-        <a href="index.html">
-          <img id="inverted-logo" src = "img/zeal-logo.jpg">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-                      <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="venues.html">Venues and rooms</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="studios.html">Studios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gear.html">Gear</a>
-            </li>
-			<li class="nav-item">
-              <a class="nav-link" href="priceFinder.html">View Prices</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank">
-			  Book with us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="faq.html">FAQ</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Contact us</a>
-            </li>
-          </ul>
+        <div class="intro-message">
+          <img id="logo" src="img/zeal-official-logo_vector.jpg"></img>
+          <h3 id="">Zeal FAQ</h3>
         </div>
       </div>
-    </nav>
-
+    </header>
     
 <!-- -------------------------------------------------------------------------------- START -->
 <!--
 -->
     <script type="text/javascript">
-      var equipmentListCode = "<br><br><div style='font-size:16px;'>For the full equipment list, click <a href='gear.html'>here</a>.</div><br>";
-    
       var FAQ = [ ["Question", "Answer"],
                   // --------------------------------------------------------------------------------
                   // 
@@ -91,31 +56,32 @@
                   ["1. Can alcohol be consumed at the venue?", "We have a no alcohol and drugs policy at Zeal. Therefore, no alcohol can be sold or consumed within and outside the premises."],
                   ["2. Can food be consumed at the venue?", "Yes, you can bring your own kai. We also have a cafe onsite where you can purchase hot food and drinks. Let us know if you would like us to keep the cafe open during your event. (All of the profits from the cafe go to supporting our youth programmes)"],
                   ["3. Are there any venue noise restrictions?", "No, make as much noise as you want! We are in a commercial area so there is no residencial sound restriction."],
-                  ["4. Is there sound and lighting equipment available?", "Yes, we have onsite sound and lighting equipment that can be utilise for your event. Let us know If you require a lighting or sound tech by filling out the booking form." + equipmentListCode],
+                  ["4. Is there sound and lighting equipment available?", "Yes, we have onsite sound and lighting equipment that can be utilise for your event. Have a look at our equipment list ---<br>Let us know If you require a lighting or sound tech by filling out the booking form."],
                   ["5. Do you have an outdoor space?", "Yes, we have an outdoor courtyard at the front of the building that can be used for concerts, performances and markets. Let us know when you are filling out the booking form if you would like to use this space."],
                   ["6. Is there parking available at the venue?", "Yes, the carpark directly in front of Zeal have a 120 minutes limit. There is paid parking available at the Falls carpark or there is free parking at the Tui Glen Reserve, 5 minutes walk from the venue."],
                   ["7. Do you have security at the venue?", "Yes, we provide security services. If your event has 101 or more people, it is required to have an onsite security guard. Security guards will be charged at a rate of $25.00 per guard per hour (Includes GST)."],
-                  ["8. Do you provide a cleaning service?", "Yes. We can clean the venue after your event (at an additional cost) or you can do it yourself. As long as you do it well! :) A cleaning charge of $30 plus GST per hour will be added to your final invoice if the venue is not left as it is found."],
-                  ["9. What is the difference between community and corporate rates?", "We offer discounted prices for not-for profit and community organisations that serve our community. If you are unsure which category you fall into, just email us."],
+                  ["8. Do you have provide a cleaning service?", "Yes. We can clean the venue after your event (at an additional cost) or you can do it yourself. As long as you do it well! :) A cleaning charge of $30 plus GST per hour will be added to your final invoice if the venue is not left as it is found."],
                   // Data block ends .....
                   // --------------------------------------------------------------------------------
                   ["dummy", "dummy"]
                ];
 
       function createFAQ() {
-        document.writeln('<div class="col-sm-9 faq-list"><ul>');
+        document.writeln('<ul>');
         for (var i=1; i<=FAQ.length-2; i++) {
           document.writeln('<li style="margin-bottom:12px;font-size:22px;color:black;"><font style="color:black">' + FAQ[i][0] + '</font></li>');
           document.writeln('<li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">' + FAQ[i][1] + '</li>');
         }
-        document.writeln('</ul></div>');
+        document.writeln('</ul>');
       }
     </script>
 
     <br><br>
+    <center>
     <div id="FAQ" align="left">
       <script> createFAQ(); </script>
     </div>
+    </center>
     
     <script type="text/javascript">
       function toggle(tag) {
@@ -127,7 +93,7 @@
           parent.style.display = "block"   
         }
       }
-          
+    
       function init() {
         var obj = document.getElementById('FAQ');
         var element = "";
@@ -151,46 +117,11 @@
         }       
       }
       
-      function equipmentList() {
-        document.writeln('<div style="padding:20px;font-size:22px;">');
-        document.writeln('For the full equipment list, click <a href="gear.html">here</a>. </div>');
-      }
-      
       window.onload = init; 
     </script>
 <!--
 -->
 <!-- -------------------------------------------------------------------------------- END -->
-
-
-    <aside class="banner">
-      <div class="banner-overlay"></div>
-      <div class="container">
-
-        <div class ="row zeal-text">
-        <div class="col-md-3">
-          Copyright Zeal West. <br> All rights reserved unless otherwise noted.
-        </div>
-        <div class="col-md-3">
-          <b>Find us online:</b> <br><br>
-          Facebook <br>
-          Instagram
-        </div>
-        <div class="col-md-3">
-          <b>Come say hi:</b> <br><br>
-          20 Alderman Drive, <br>
-          Henderson, <br>
-          Auckland 0612
-        </div>
-        <div class="col-md-3">
-          <b>Drop us a line:</b> <br><br>
-          0800 FIND ZEAL <br>
-            <a class="link-white" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Email us</a>
-        </div>
-      </div>
-      </div>
-
-    </aside>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
