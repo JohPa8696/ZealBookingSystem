@@ -10,7 +10,7 @@
 			var onsiteHourlyRate = 20,
 				AVTechnicianHourlyRate = 20,
 				securityHourlyRate = 20,
-				cleaningHourlyRate = 30;
+				cleaningFlatRate = 30;
 				
 			<!-- Community rate Prices: -->
 			var mainroomCommunityHourlyRate = 35,
@@ -66,10 +66,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Price calculator</title>
+    <title>Price Finder</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/landing-page.css" rel="stylesheet"> 
+    <link href="css/priceFinder.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -80,7 +82,7 @@
 
 	<style>
 	#venue, #studio, #gear, #priceHolder {display:none;}
-	
+	#bookWithUs {visibility:hidden; float: left; padding-top:30px;}
 	
 	#venueChecked:checked ~ #venue {display:block;}
 	#studioChecked:checked ~ #studio {display:block;}
@@ -96,100 +98,154 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a href="index.html">
+          <img id="inverted-logo" src = "img/zeal-logo.jpg">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+              <a class="nav-link" href="venues.html">Venues and rooms</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="studios.html">Studios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gear.html">Gear</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="priceFinder.html">View Prices</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank">
+			  Book with us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Contact us</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Header -->
-    <header class="intro-header" style='height:550px;background-image: url("img/studios-hire.jpg");' >
-      <div class="container">
-        <h1 style="padding-top:280px">Price Finder</h1>
-        <h3>Here you can get a rough price estimate before booking</h3>
-        
-		<div class="intro-message">
-
-		              
-        </div>
-      </div>
-    </header>
-
-	
 	
     <!-- Page Content -->
     <section class="content-section-a">
 
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 ml-auto">
-            <br><hr><h2 class="section-heading">What would you like to book?</h2>
+
+          <div class="col-lg-10">
+
+          	<h1 class="price-finder-heading">Price Finder</h1>
+       		<p class="price-finder-intro">Here you can get a rough price estimate before booking</p>
+            <hr><h4 class="section-heading price-finder-sub-heading">What would you like to book?</h4>
             <form>
-				<input type="radio" name="bookingtype" value="venueChecked" id="venueChecked" class="bookingtype"/>I want to book a Venue or Room
+				
+				<input type="radio" name="bookingtype" value="venueChecked" id="venueChecked" />
+				<label class="price-finder-label" for="venueChecked">I want to book a Venue or Room</label>
 				<br>
-				<input type="radio" name="bookingtype" value="studioChecked" id="studioChecked" class="bookingtype"/>I want to book a Studio
+
+				<input type="radio" name="bookingtype" value="studioChecked" id="studioChecked" class="bookingtype"/>
+				<label class="price-finder-label" for="studioChecked">I want to book a Studio</label>
 				<br>
-				<input type="radio" name="bookingtype" value="gearChecked" id="gearChecked" class="bookingtype"/>I want to hire Gear
+
+				<input type="radio" name="bookingtype" value="gearChecked" id="gearChecked" class="bookingtype"/>
+				<label class="price-finder-label" for="gearChecked">I want to hire Gear</label>
 				
 				
 				<!-- START INNER LIST 1  (book venue)-->
 				<ul id='venue'>
-				<br><hr><h2 class="section-heading">Who is this booking for?</h2>
-				<li><input type="radio" name="eventtype" value="Community" id="community"/>Community/Non-profit</li>
-				<li><input type="radio" name="eventtype" value="Corporate" id="corporate"/>Corporate</li>
+				<hr><h4 class="section-heading price-finder-sub-heading">Who is this booking for?</h4>
+				<li>
+					<input type="radio" name="eventtype" value="community" id="community"/>
+					<label for="community" class="price-finder-label">Community/Non-profit</label>
+				</li>
+				<li>
+					<input type="radio" name="eventtype" value="corporate" id="corporate"/>
+					<label for="corporate" class="price-finder-label">Corporate</label>
+				</li>
 				
-				<br><br><h2 class="section-heading">Which Venue or Room do you want to book?</h2>
-				<li><input type="radio" name="room" value="mainroom" id="mainroom" />Mainroom (including foyer area)
-				<li><input type="radio" name="room" value="cafeStage" id="cafeStage"/>Cafe stage/ Lounge (including foyer area)
-				<li><input type="radio" name="room" value="gallery" id="gallery" />Gallery
-				<li><input type="radio" name="room" value="meetingRoom" id="meetingRoom" />Meeting Room
-				
+				<hr>
+				<h4 class="section-heading price-finder-sub-heading">Which Venue or Room do you want to book?</h4>
+				<li>
+					<input type="radio" name="room" value="mainroom" id="mainroom" />
+					<label for="mainroom" class="price-finder-label">Mainroom (including foyer area)</label>
+				</li>
+				<li>
+					<input type="radio" name="room" value="cafeStage" id="cafeStage"/>
+					<label for="cafeStage" class="price-finder-label">Cafe stage/ Lounge (including foyer area)</label>
+				</li>
+				<li>
+					<input type="radio" name="room" value="gallery" id="gallery" />
+					<label for="gallery" class="price-finder-label">Gallery</label>
+				</li>
+				<li>
+					<input type="radio" name="room" value="meetingRoom" id="meetingRoom" />
+					<label for="meetingRoom" class="price-finder-label">Meeting room</label>
+
 				</ul>
 				<!-- END INNER LIST 1 -->
 				
 				<!-- START INNER LIST 2  (book studio)-->
 				<ul id='studio'>
-				<br><hr><h2 class="section-heading">Which Studio do you want to book?</h2>
-				<h5>Rehearsal Rooms</h5>
-				<li><input type="radio" name="studio" id="lordesRoom" />Lorde's Room
-				<li><input type="radio" name="studio" id="crowdedHouseRoom" />Crowded House Room
-				<li><input type="radio" name="studio" id="six60Room" />Six60 Room
-				<br><br><h5>Optional Additional Gear (please indicate when booking):</h5> <p>Microphone ($5 each)
-				<br>Cymbals/hihat set ($10/set)<br>Drumsticks ($4 per pair)</p>
-				<h5>Recording Session</h5>
-				<li><input type="radio" name="studio" id="recording" />Recording 
+				<br><hr><h4 class="section-heading price-finder-sub-heading">Select a studio rehearsal room or book a recording session?</h4>
+				<li><input type="radio" name="studio" id="lordesRoom" />
+					<label for="lordesRoom" class="price-finder-label">Lorde's Room</label>
+				</li>
+				<li>
+					<input type="radio" name="studio" id="crowdedHouseRoom" />
+					<label for="crowdedHouseRoom" class="price-finder-label">Crowded House Room</label>
+				</li>
+				<li>
+					<input type="radio" name="studio" id="six60Room" />
+					<label for="six60Room" class="price-finder-label">Six60 Room<label>
+				</li>
+				<li><input type="radio" name="studio" id="recording" />
+					<label for="recording" class="price-finder-label">Recording<label>	
+				</li>				 
 				</ul>
 				<!-- END INNER LIST 2 -->
 				
 				<!-- START INNER LIST 3  (hire gear)-->
 				<ul id='gear'>
-				<br><hr><h2 class="section-heading">Which Equipment do you want to hire?</h2>
-				<li><input type="radio" name="gear" id="smallPA" />Small PA package (Under 75 people)
-				<li><input type="radio" name="gear" id="mediumPA" />Medium PA package (75 or more)
+				<br><hr><h4 class="section-heading">Which Equipment do you want to hire?</h4>
+				<li>
+					<input type="radio" name="gear" id="smallPA" />
+					<label for="smallPA" class="price-finder-label">Small PA package (Under 75 people)</label>
+				</li>
+				<li>
+					<input type="radio" name="gear" id="mediumPA" />
+					<label for="mediumPA" class="price-finder-label">Medium PA package (75 or more)</label>
+				</li>
 				</ul>
 				<!-- END INNER LIST 3 -->
 				
 			</form>
-			<div id="priceHolder"> </div>
+			<div id="priceHolder"> 
+					<!-- PRICES GO HERE, GENERATED BY JAVASCRIPT CODE-->
+			</div>
+			
+			<div id="bookWithUs">
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank" class="btn btn-secondary btn-lg btn-book">
+              <!-- <i class="fa fa-twitter fa-fw"></i> -->
+              <span>Book with us now</span>
+            </a>
+			</div>
 			
 			<script>
 			//Whenever form changes, the price text will be changed
 			document.getElementsByTagName("form")[0].addEventListener("change", function (e) {
 				document.getElementById("priceHolder").style.display = "none";
+				document.getElementById("bookWithUs").style.visibility = "hidden";
 				var showPrice= false;
 				var priceText= "";
 				
@@ -226,30 +282,34 @@
 					}
 					if (isMainroomCafeStageOrGallery) {
 						priceText += "<br><br><h5>Additional services if required:</h5> <p>AV Technician: $"+AVTechnicianHourlyRate+"/hr"
-									+"<br>Security Services: $"+securityHourlyRate+"/hr<br>Cleaning Service: $"+cleaningHourlyRate+"/hr</p>";
+									+"<br>Security Services: $"+securityHourlyRate+"/hr<br>Cleaning Service: $"+cleaningFlatRate+" Flat rate</p>";
 					}
 				}
 				
 				if(document.getElementById("studioChecked").checked) {
+					var isLordeCrowdedOrSix60Room=false;
 					if(document.getElementById("lordesRoom").checked) {
 						priceText += "Hourly rate: $"+lordesRoomStudioHourlyRate+" per hour <br>3 Hour booking: $"+lordesRoomStudio3HourRate
-									+ "<br>8 hour booking: $"+lordesRoomStudio8HourRate; showPrice= true;
+									+ "<br>8 hour booking: $"+lordesRoomStudio8HourRate; showPrice= true; isLordeCrowdedOrSix60Room=true;
 					} else if(document.getElementById("crowdedHouseRoom").checked) {
 						priceText += "Hourly rate: $"+crowdedHouseRoomStudioHourlyRate+" per hour <br>3 Hour booking: $"+crowdedHouseRoomStudio3HourRate
-									+ "<br>8 hour booking: $"+crowdedHouseRoomStudio8HourRate; showPrice= true;
+									+ "<br>8 hour booking: $"+crowdedHouseRoomStudio8HourRate; showPrice= true;isLordeCrowdedOrSix60Room=true;
 					} else if(document.getElementById("six60Room").checked) {
 						priceText += "Hourly rate: $"+six60RoomStudioHourlyRate+" per hour <br>3 Hour booking: $"+six60RoomStudio3HourRate
-									+ "<br>8 hour booking: $"+six60RoomStudio8HourRate; showPrice= true;
+									+ "<br>8 hour booking: $"+six60RoomStudio8HourRate; showPrice= true;isLordeCrowdedOrSix60Room=true;
 					} else if(document.getElementById("recording").checked) {
 						priceText += "Hourly rate: $"+recordingStudioHourlyRate+" per hour <br>Full day booking: $"+recordingStudioFullDayRate
 									+"<br>If mixing/editing is required: $"+mixingEditingStudioHourlyRate+" per hour"; showPrice= true;
 					}
+					if(isLordeCrowdedOrSix60Room){ 
+						priceText += "<br></hr></h4><span>Optional Additional Gear (please indicate when booking):</span><ul><li>Microphone ($5 each)</li> <li>Cymbals/hihat set ($10/set)</li> <li> Drumsticks ($4 per pair)</li></ul>";
+					 }
 				}
 				
 				if(document.getElementById("gearChecked").checked) {
 					if(document.getElementById("smallPA").checked) {
 						priceText = "Full day booking: $"+smallPApackageFullDayRateAndDetail +"<br><br>If delivery required: $50 (within Auckland)"
-									+"<br><br><h5>Additional Options:</h5> <p>Microphone ($"+microphoneHire+" each)"
+									+"<br></h4><span>Additional Options:</span> <p>Microphone ($"+microphoneHire+" each)"
 								 +"<br>Microphone Stands ($"+microphoneStandHire+" each)<br>Swap analog desk to digital: $"+swapToAnalog+"</p>"; showPrice= true;
 					} else if(document.getElementById("mediumPA").checked) {
 						priceText = "Full day booking: $"+mediumPApackageFullDayRateAndDetail+"<br><br>If delivery required: $50 (within Auckland)"
@@ -262,7 +322,10 @@
 				'<br><hr><h1 class="section-heading">Prices for your booking:</h1>' +
 				'<h3 >' + priceText + '</h3>';
 				
-				if(showPrice) {document.getElementById("priceHolder").style.display = "block"};
+				if(showPrice) {
+				document.getElementById("priceHolder").style.display = "block";
+				document.getElementById("bookWithUs").style.visibility = "visible";
+				};
 			});
 			</script>
 			
@@ -273,49 +336,35 @@
       <!-- /.container -->
     </section>
 	
-	
-    <aside class="banner" style='background-image: url("img/studios-hire.jpg");'>
-
+    <!-- Footer -->
+    <aside class="banner">
+      <div class="banner-overlay"></div>
       <div class="container">
 
-        <div class="row">
-          <div class="col-lg-6 my-auto">
-            <h2>Book Now: Click Here</h2>
-          </div>
-          <div class="col-lg-6 my-auto">
-      
-          </div>
+        <div class ="row zeal-text">
+        <div class="col-md-3">
+          Copyright Zeal West. <br> All rights reserved unless otherwise noted.
         </div>
-
+        <div class="col-md-3">
+          <b>Find us online:</b> <br><br>
+          Facebook <br>
+          Instagram
+        </div>
+        <div class="col-md-3">
+          <b>Come say hi:</b> <br><br>
+          20 Alderman Drive, <br>
+          Henderson, <br>
+          Auckland 0612
+        </div>
+        <div class="col-md-3">
+          <b>Drop us a line:</b> <br><br>
+          0800 FIND ZEAL <br>
+            <a class="link-white" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Email us</a>
+        </div>
       </div>
-      <!-- /.container -->
+      </div>
 
     </aside>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a href="#">Home</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#about">About</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#services">Services</a>
-          </li>
-          <li class="footer-menu-divider list-inline-item">&sdot;</li>
-          <li class="list-inline-item">
-            <a href="#contact">Contact</a>
-          </li>
-        </ul>
-        <p class="copyright text-muted small">Copyright &copy; Zeal 2017. All Rights Reserved</p>
-      </div>
-    </footer>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

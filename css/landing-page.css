@@ -253,9 +253,11 @@ p.copyright {
   width: 100%;
   margin: 0 auto;
   color: #ee1d23;
+  background-color: white; 
 }
 
 .zeal-button-secondary:hover {
+  border:  2px solid #ee1d23; 
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -360,7 +362,16 @@ a.spaces-container:hover{
   color: #fff;
 }
 
+.faq-list{
+  margin-left: 30px;
+  margin-top: 60px;
+}
+
 @media screen and (max-width: 767px){
+
+  .faq-list{
+    margin-left: 0;
+  }
 
   .intro-message{
     max-width: 100%;
@@ -374,8 +385,26 @@ a.spaces-container:hover{
   
 }
 
-
 .img-row {
   padding-bottom: 30px;
 }
 
+.zeal-gallery-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.zeal-gallery-section {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.zeal-col-left {
+  text-align: right;
+}
+
+.zeal-action, .zeal-action:hover {
+  color: black;
+  /* text-decoration: none; */
+}

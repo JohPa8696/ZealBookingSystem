@@ -27,7 +27,9 @@
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <img id="inverted-logo" src = "img/zeal-logo.jpg">
+        <a href="index.html">
+          <img id="inverted-logo" src = "img/zeal-logo.jpg">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,15 +47,18 @@
             <li class="nav-item">
               <a class="nav-link" href="gear.html">Gear</a>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank">Book with us</a>
+			<li class="nav-item">
+              <a class="nav-link" href="priceFinder.html">View Prices</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#venue-booking">FAQ</a>
+              <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank">
+			         Book with us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contact us</a>
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Contact us</a>
             </li>
           </ul>
         </div>
@@ -84,11 +89,22 @@
               <br/> <br/>
             Etiam cursus erat ut lorem blandit venenatis. Nullam quis eros a enim ultricies consequat id at sapien. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus eleifend vestibulum tortor, at scelerisque nulla euismod quis. Donec aliquam quis ante vitae fermentum. Etiam mattis placerat porta. Quisque aliquam tincidunt massa ut eleifend. Mauris in ipsum vulputate, ultrices mauris quis, viverra nibh.
           </p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank" class="btn btn-secondary btn-lg btn-book">
-              <!-- <i class="fa fa-twitter fa-fw"></i> -->
-              <span>Book with us now</span>
-            </a>
+
           </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+              <a href="priceFinder.html" class="btn btn-secondary btn-lg zeal-button-secondary">
+                <!-- <i class="fa fa-twitter fa-fw"></i> -->
+                <span>View prices</span>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank" class="btn btn-secondary btn-lg btn-book">
+                <!-- <i class="fa fa-twitter fa-fw"></i> -->
+                <span>Book with us now</span>
+              </a>
+            </div>
+            <div class="col-md-3"></div>
         </div>
 
       </div>
@@ -103,7 +119,7 @@
         <div class="row">
           <div class="col-md-4 mr-auto order-lg-2 zeal-col">
             <div class="clearfix"></div>
-            <a class="spaces-container" href="#">
+            <a class="spaces-container" href="venues.html">
               <img class="img-fluid" src="img/venues-hire.jpg" alt="">
               <h5 class="section-heading zeal-heading-left spaces-title">Venue and Rooms</h5>
             </a>
@@ -138,22 +154,26 @@
   
           <div class="row">
   
-            <div class="col-md-4 mr-auto order-lg-2 zeal-col">
+            <div class="col-md-4 mr-auto order-lg-2 zeal-col" >
+              <a href="priceFinder.html" class="zeal-action">
               <div class="clearfix"></div>
               <div class="zeal-icon-border"> 
               <img class="img-fluid zeal-calc-icon" src="img/icon-calculator.png" alt="">
               </div>
               <h5 class="section-heading zeal-heading">Step 1</h5>
-              <p class="zeal-mini-paragraph-center">Calculate your booking costs</p>
+              <p class="zeal-mini-paragraph-center">Calculate your booking costs with our price calculator</p>
+            </a>
             </div>
   
-            <div class="col-md-4 mr-auto order-lg-2 zeal-col">
+            <div class="col-md-4 mr-auto order-lg-2 zeal-col" >
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank" class="zeal-action">
                 <div class="clearfix"></div>
                 <div class="zeal-icon-border"> 
                 <img class="img-fluid zeal-booking-icon zeal-icon"  src="img/icon-plane.png" alt="">
                 </div>
                 <h5 class="section-heading zeal-heading">Step 2</h5>
                 <p class="zeal-mini-paragraph-center">Fill in an online booking form</p>
+              </a>
               </div>
   
             <div class="col-md-4 mr-auto order-lg-2 zeal-col">
@@ -164,12 +184,13 @@
               <h5 class="section-heading zeal-heading">Step 3</h5>
               <p class="zeal-mini-paragraph-center">We will be in touch asap</p>
             </div>
+            
           </div>
   
         </div>
-        <a href="#" class="btn btn-secondary btn-lg btn-book">
+        <!-- <a href="#" class="btn btn-secondary btn-lg btn-book">
             <span>Book with us now</span>
-          </a>
+          </a> -->
 
       </section>
 
@@ -195,7 +216,7 @@
         <div class="col-md-3">
           <b>Drop us a line:</b> <br><br>
           0800 FIND ZEAL <br>
-          <a class="link-white" href="mailto:hi@zeal.nz">hi@zeal.nz</a>
+            <a class="link-white" href="mailto:sophie.jack@zeal.org.nz,mati@zeal.org.nz">Email us</a>
         </div>
       </div>
       </div>
