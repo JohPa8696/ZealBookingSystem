@@ -253,9 +253,11 @@ p.copyright {
   width: 100%;
   margin: 0 auto;
   color: #ee1d23;
+  background-color: white; 
 }
 
 .zeal-button-secondary:hover {
+  border:  2px solid #ee1d23; 
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -396,4 +398,8 @@ a.spaces-container:hover{
 .zeal-gallery-section {
   padding-left: 100px;
   padding-right: 100px;
+}
+
+.zeal-col-left {
+  text-align: right;
 }
