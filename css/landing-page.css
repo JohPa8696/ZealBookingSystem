@@ -253,9 +253,11 @@ p.copyright {
   width: 100%;
   margin: 0 auto;
   color: #ee1d23;
+  background-color: white; 
 }
 
 .zeal-button-secondary:hover {
+  border:  2px solid #ee1d23; 
   display: block;
   width: 100%;
   margin: 0 auto;
@@ -361,7 +363,7 @@ a.spaces-container:hover{
 }
 
 .faq-list{
-  margin-left: 90px;
+  margin-left: 30px;
   margin-top: 60px;
 }
 
@@ -421,4 +423,10 @@ video#facilities-video {
     #bgvfacilities-video {
         display: none;
     }
+.zeal-col-left {
+  text-align: right;
+}
+
+.zeal-action, .zeal-action:hover {
+  color: black;
 }
