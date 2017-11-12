@@ -246,6 +246,7 @@ p.copyright {
   width: 25%;
   margin: 20px;
 }
+
 .zeal-button-secondary {
   border:  2px solid #ee1d23;
   display: block;
@@ -359,7 +360,16 @@ a.spaces-container:hover{
   color: #fff;
 }
 
+.faq-list{
+  margin-left: 90px;
+  margin-top: 60px;
+}
+
 @media screen and (max-width: 767px){
+
+  .faq-list{
+    margin-left: 0;
+  }
 
   .intro-message{
     max-width: 100%;
@@ -372,3 +382,9 @@ a.spaces-container:hover{
 
   
 }
+
+
+.img-row {
+  padding-bottom: 30px;
+}
+
