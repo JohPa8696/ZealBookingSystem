@@ -382,6 +382,10 @@ a.spaces-container:hover{
     padding-right: 20px;
   }
 
+  .btn-book{
+    width: 100%;
+    margin-top: 20px;
+  }
   
 }
 
@@ -423,10 +427,17 @@ video#facilities-video {
     #bgvfacilities-video {
         display: none;
     }
+}
+
 .zeal-col-left {
   text-align: right;
 }
 
-.zeal-action, .zeal-action:hover {
+a.zeal-action:hover {
   color: black;
+  background-color: black;
 }
+
+
+
+
