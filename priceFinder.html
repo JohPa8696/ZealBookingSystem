@@ -217,9 +217,15 @@
 				
 				<!-- START INNER LIST 3  (hire gear)-->
 				<ul id='gear'>
-				<br><hr><h2 class="section-heading">Which Equipment do you want to hire?</h2>
-				<li><input type="radio" name="gear" id="smallPA" />Small PA package (Under 75 people)
-				<li><input type="radio" name="gear" id="mediumPA" />Medium PA package (75 or more)
+				<br><hr><h4 class="section-heading">Which Equipment do you want to hire?</h4>
+				<li>
+					<input type="radio" name="gear" id="smallPA" />
+					<label for="smallPA" class="price-finder-label">Small PA package (Under 75 people)</label>
+				</li>
+				<li>
+					<input type="radio" name="gear" id="mediumPA" />
+					<label for="mediumPA" class="price-finder-label">Medium PA package (75 or more)</label>
+				</li>
 				</ul>
 				<!-- END INNER LIST 3 -->
 				
@@ -293,7 +299,7 @@
 				if(document.getElementById("gearChecked").checked) {
 					if(document.getElementById("smallPA").checked) {
 						priceText = "Full day booking: $"+smallPApackageFullDayRateAndDetail +"<br><br>If delivery required: $50 (within Auckland)"
-									+"<br><br><h5>Additional Options:</h5> <p>Microphone ($"+microphoneHire+" each)"
+									+"<br></h4><span>Additional Options:</span> <p>Microphone ($"+microphoneHire+" each)"
 								 +"<br>Microphone Stands ($"+microphoneStandHire+" each)<br>Swap analog desk to digital: $"+swapToAnalog+"</p>"; showPrice= true;
 					} else if(document.getElementById("mediumPA").checked) {
 						priceText = "Full day booking: $"+mediumPApackageFullDayRateAndDetail+"<br><br>If delivery required: $50 (within Auckland)"
