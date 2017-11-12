@@ -360,7 +360,16 @@ a.spaces-container:hover{
   color: #fff;
 }
 
+.faq-list{
+  margin-left: 90px;
+  margin-top: 60px;
+}
+
 @media screen and (max-width: 767px){
+
+  .faq-list{
+    margin-left: 0;
+  }
 
   .intro-message{
     max-width: 100%;

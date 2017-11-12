@@ -28,16 +28,46 @@
   </head>
 
   <body>
+    
 
-    <!-- HEADERS -->
-    <header class="intro-header">
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container">
-        <div class="intro-message">
-          <img id="logo" src="img/zeal-official-logo_vector.jpg"></img>
-          <h3 id="">Zeal FAQ</h3>
+        <a href="index.html">
+          <img id="inverted-logo" src = "img/zeal-logo.jpg">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+                      <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="venues.html">Venues and rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="studios.html">Studios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gear.html">Gear</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSc3-xQw2Lpbfq0UAiGdffq5IPGMBwCpwaNgO8yhCri6I9Qbbg/viewform?embedded=true" target="_blank">Book with us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#venue-booking">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact us</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </nav>
+
     
 <!-- -------------------------------------------------------------------------------- START -->
 <!--
@@ -67,12 +97,12 @@
                ];
 
       function createFAQ() {
-        document.writeln('<ul>');
+        document.writeln('<div class="col-sm-9 faq-list"><ul>');
         for (var i=1; i<=FAQ.length-2; i++) {
           document.writeln('<li style="margin-bottom:12px;font-size:22px;color:black;"><font style="color:black">' + FAQ[i][0] + '</font></li>');
           document.writeln('<li style="padding: 0px 0px 10px 20px; list-style-type:none;font-size:16px;display:block;font-weight:500;">' + FAQ[i][1] + '</li>');
         }
-        document.writeln('</ul>');
+        document.writeln('</ul></div>');
       }
     </script>
 
