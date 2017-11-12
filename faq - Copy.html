@@ -43,8 +43,6 @@
 <!--
 -->
     <script type="text/javascript">
-      var equipmentListCode = "<br><br><div style='font-size:16px;'>For the full equipment list, click <a href='gear.html'>here</a>.</div><br>";
-    
       var FAQ = [ ["Question", "Answer"],
                   // --------------------------------------------------------------------------------
                   // 
@@ -58,12 +56,11 @@
                   ["1. Can alcohol be consumed at the venue?", "We have a no alcohol and drugs policy at Zeal. Therefore, no alcohol can be sold or consumed within and outside the premises."],
                   ["2. Can food be consumed at the venue?", "Yes, you can bring your own kai. We also have a cafe onsite where you can purchase hot food and drinks. Let us know if you would like us to keep the cafe open during your event. (All of the profits from the cafe go to supporting our youth programmes)"],
                   ["3. Are there any venue noise restrictions?", "No, make as much noise as you want! We are in a commercial area so there is no residencial sound restriction."],
-                  ["4. Is there sound and lighting equipment available?", "Yes, we have onsite sound and lighting equipment that can be utilise for your event. Let us know If you require a lighting or sound tech by filling out the booking form." + equipmentListCode],
+                  ["4. Is there sound and lighting equipment available?", "Yes, we have onsite sound and lighting equipment that can be utilise for your event. Have a look at our equipment list ---<br>Let us know If you require a lighting or sound tech by filling out the booking form."],
                   ["5. Do you have an outdoor space?", "Yes, we have an outdoor courtyard at the front of the building that can be used for concerts, performances and markets. Let us know when you are filling out the booking form if you would like to use this space."],
                   ["6. Is there parking available at the venue?", "Yes, the carpark directly in front of Zeal have a 120 minutes limit. There is paid parking available at the Falls carpark or there is free parking at the Tui Glen Reserve, 5 minutes walk from the venue."],
                   ["7. Do you have security at the venue?", "Yes, we provide security services. If your event has 101 or more people, it is required to have an onsite security guard. Security guards will be charged at a rate of $25.00 per guard per hour (Includes GST)."],
-                  ["8. Do you provide a cleaning service?", "Yes. We can clean the venue after your event (at an additional cost) or you can do it yourself. As long as you do it well! :) A cleaning charge of $30 plus GST per hour will be added to your final invoice if the venue is not left as it is found."],
-                  ["9. What is the difference between community and corporate rates?", "We offer discounted prices for not-for profit and community organisations that serve our community. If you are unsure which category you fall into, just email us."],
+                  ["8. Do you have provide a cleaning service?", "Yes. We can clean the venue after your event (at an additional cost) or you can do it yourself. As long as you do it well! :) A cleaning charge of $30 plus GST per hour will be added to your final invoice if the venue is not left as it is found."],
                   // Data block ends .....
                   // --------------------------------------------------------------------------------
                   ["dummy", "dummy"]
@@ -80,9 +77,11 @@
     </script>
 
     <br><br>
+    <center>
     <div id="FAQ" align="left">
       <script> createFAQ(); </script>
     </div>
+    </center>
     
     <script type="text/javascript">
       function toggle(tag) {
@@ -94,7 +93,7 @@
           parent.style.display = "block"   
         }
       }
-          
+    
       function init() {
         var obj = document.getElementById('FAQ');
         var element = "";
@@ -116,11 +115,6 @@
           element.style.listStyleType = 'none';        // Remove bullet point.
           element.style.display = 'none';              // Display answer block.
         }       
-      }
-      
-      function equipmentList() {
-        document.writeln('<div style="padding:20px;font-size:22px;">');
-        document.writeln('For the full equipment list, click <a href="gear.html">here</a>. </div>');
       }
       
       window.onload = init; 
