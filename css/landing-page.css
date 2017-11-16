@@ -224,8 +224,6 @@ p.copyright {
 .btn-book {
   border:  2px solid #ee1d23;
   display: block;
-  width: 35%;
-  min-width: 12em;
   margin: 0 auto;
   background: #ee1d23;
   color: white;
@@ -234,8 +232,6 @@ p.copyright {
 .btn-book:hover {
   border:  2px solid #ee1d23;
   display: block;
-  width: 35%;
-  min-width: 12em;
   margin: 0 auto;
   color: #ee1d23;
   background-color: white;
